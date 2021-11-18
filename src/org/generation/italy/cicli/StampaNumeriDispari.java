@@ -15,21 +15,23 @@ public class StampaNumeriDispari {
 		// Random init
 		Random rGen = new Random();
 		
-		// genera array
+		// crea array vuoto
 		System.out.println("Ecco " + howMany + " numeri casuali da 0 a 99:");
 		int[] numbers = new int[howMany];
 		
+		// assegna ad ogni elemento dell'array un numero casuale e stampali tutti
 		for(int i = 0; i < numbers.length; i++) {
-			
-			// assegna ad ogni elemento dell'array un numero casuale
 			int rNum = rGen.nextInt(100);
 			numbers[i] = rNum;
-			
-			// lo stampa solo se dispari
-			if (!(rNum % 2 == 0)) {
-				System.out.println(numbers[i]);
+			System.out.println(numbers[i]);
+		}
+		
+		// stampa solo se dispari
+		System.out.println("\nDi cui i seguenti sono dispari: ");
+		for(int j = 0; j < numbers.length; j++) {
+			if (!(numbers[j] % 2 == 0)) {
+				System.out.println(numbers[j]);
 			}
-			
 		}
 		
 		// Scanner close
