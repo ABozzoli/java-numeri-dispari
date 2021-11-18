@@ -28,11 +28,29 @@ public class StampaNumeriDispari {
 		
 		// stampa solo se dispari
 		System.out.println("\nDi cui i seguenti sono dispari: ");
-		for(int j = 0; j < numbers.length; j++) {
-			if (!(numbers[j] % 2 == 0)) {
-				System.out.println(numbers[j]);
+		for(int i = 0; i < numbers.length; i++) {
+			if (!(numbers[i] % 2 == 0)) {
+				System.out.println(numbers[i]);
 			}
 		}
+		
+		// totale numeri dispari
+		int nOdd =0;
+		for(int i = 0; i < numbers.length; i++) {
+			if (!(numbers[i] % 2 == 0)) {
+				nOdd++;
+			}
+		}
+		System.out.print("\nQuindi i numeri dispari sono: " + nOdd);
+
+		// totale numeri pari
+		int nEven =0;
+		for(int i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				nEven++;
+			}
+		}
+		System.out.print("\nEd i numeri pari sono: " + nEven);
 		
 		// Scanner close
 		scanner.close();
