@@ -21,44 +21,34 @@ public class StampaNumeriDispari {
 		
 		// assegna ad ogni elemento dell'array un numero casuale e stampali tutti
 		for(int i = 0; i < numbers.length; i++) {
-			int rNum = rGen.nextInt(100);
-			numbers[i] = rNum;
+			numbers[i] = rGen.nextInt(100);
 			System.out.println(numbers[i]);
 		}
 		
-		// stampa solo se dispari
+		// stampa solo se dispari e contali + conta pari + somma numeri tra 10 e 50
+		int nOdd = 0;
+		int nEven = 0;
+		int sum = 0;
+		
 		System.out.println("\nDi cui i seguenti sono dispari: ");
+		
 		for(int i = 0; i < numbers.length; i++) {
+			
 			if (!(numbers[i] % 2 == 0)) {
 				System.out.println(numbers[i]);
-			}
-		}
-		
-		// totale numeri dispari
-		int nOdd = 0;
-		for(int i = 0; i < numbers.length; i++) {
-			if (!(numbers[i] % 2 == 0)) {
 				nOdd++;
-			}
-		}
-		System.out.println("\nQuindi i numeri dispari sono: " + nOdd);
-
-		// totale numeri pari
-		int nEven = 0;
-		for(int i = 0; i < numbers.length; i++) {
-			if (numbers[i] % 2 == 0) {
+			} else {
 				nEven++;
 			}
-		}
-		System.out.println("\nEd i numeri pari sono: " + nEven);
-		
-		// somma dei numeri tra 10 e 50
-		int sum = 0;
-		for(int i = 0; i < numbers.length; i++) {
+			
 			if ((numbers[i] > 10) && (numbers[i] < 50)) {
 				sum += numbers[i];
 			}
+			
 		}
+		
+		System.out.println("\nQuindi i numeri dispari sono: " + nOdd);
+		System.out.println("\nEd i numeri pari sono: " + nEven);
 		System.out.println("\nLa somma dei numeri compresi tra 10 e 50 è: " + sum);
 		
 		// Scanner close
